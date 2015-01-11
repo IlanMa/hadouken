@@ -1,0 +1,36 @@
+<html>
+<head>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="js/main.js"></script>
+</head>
+<body onload="resetGame()">
+
+
+
+<div id="ryuPowerBar">
+    <div id="ryuBar"></div>
+</div>
+<div id="kenPowerBar">
+    <div id="kenBar"></div>
+</div>
+<table id="grid" align="center">
+    <tr>
+        <th colspan="2" align="left" id="problem1"><div id="externalLifeContainer1"><div id="lifeContainer1"></div></div></th>
+        <th colspan="2" align="right" id="problem2"><div id="externalLifeContainer2"><div id="lifeContainer2"></div></div></th>
+    </tr> 
+    <tr style="height: 265px">
+        <th colspan="4">
+            <div id="tellWinner"></div>
+            <input id="clickReset" type="button" value="Start Over" onclick="resetGame()"/>
+        </th>
+    </tr>
+    <tr>  
+        <td><img src="images/ryu.gif" id="fighter1Image" /><br /><input id="clickMe" type="button" value="Hadouken" onClick="charge('ryu','clickMe','lifeContainer2', 1400, 'fighter1Image','clickMe2')" disabled /></td>
+        <td colspan="2"></td>  
+        <td align="right"><img src="images/ken.gif" id="fighter2Image" /><br /><input id="clickMe2" type="button" value="Hadouken" disabled onClick="charge('ken', 'clickMe2','lifeContainer1', 2700, 'fighter2Image','clickMe')" /></td>
+    </tr>
+</table>  
+
+</body>
+</html>
